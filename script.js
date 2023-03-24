@@ -9,7 +9,7 @@ let currentStageIndex = 0;
 // Set the minimum and maximum stages
 const minStageIndex = 0;
 const finishedIndex = 0;
-const maxStageIndex = stages.length - 1;
+const maxStageIndex = stages.length;
 
 // Hide all the stages except the first one
 stages.forEach((stage, index) => {
@@ -21,6 +21,7 @@ stages.forEach((stage, index) => {
 // Get the next and previous buttons
 const nextButton = document.getElementById("next");
 const previousButton = document.getElementById("previous");
+const finishedButton = document.getElementById("finish");
 
 // Add click event listeners to the buttons
 nextButton.addEventListener("click", showNextStage);
@@ -42,10 +43,15 @@ function showNextStage() {
   } else {
     completeStage(currentStageIndex);
     finishedStages.push(stagesSidebar[currentStageIndex]);
-
-    currentStageIndex++;
-    stages[currentStageIndex].style.display = "block";
-    check();
+    console.log(currentStageIndex + "/" + maxStageIndex);
+    if (currentStageIndex + 1 === maxStageIndex) {
+      nextButton.disabled = true;
+      return;
+    } else {
+      currentStageIndex++;
+      stages[currentStageIndex].style.display = "block";
+      check();
+    }
   }
 }
 
@@ -69,6 +75,9 @@ function showPreviousStage() {
 }
 
 function check() {
+  console.log(currentStageIndex);
+  console.log(maxStageIndex);
+
   if (currentStageIndex == maxStageIndex) {
     nextButton.disabled = true;
     previousButton.removeAttribute("disabled");
@@ -79,14 +88,13 @@ function check() {
 }
 
 function completeStage(currentIndex) {
-  //console.log(stagesSidebar[0]);
   let stage = stagesSidebar[currentIndex];
   if (stage === null || stage === undefined) {
     console.log(stage);
     return;
   }
 
-  if (currentIndex === maxStageIndex - 1) {
+  if (currentIndex === maxStageIndex) {
     var icon = document.createElement("i");
     icon.classList.add("icon", "done", "fa-solid", "fa-check");
     lastStage = stagesSidebar[currentIndex + 1];
@@ -96,6 +104,5 @@ function completeStage(currentIndex) {
   icon.classList.add("icon", "done", "fa-solid", "fa-check");
 
   stage.appendChild(icon);
-  //console.log("adding stage thingy");
 }
 check();
