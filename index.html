@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lag en din første nettside med HTML og CSS</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+
+    <!-- Fonts and Icons -->
+    <script
+      src="https://kit.fontawesome.com/244b05ebf0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark">
+    <nav class="col-1">
+      <div class="sidebar">
+        <h3 style="text-align: center">Steps:</h3>
+        <ul>
+          <li id="sidebar-Stage">Step 1: Laste ned</li>
+          <li id="sidebar-Stage">Step 2: Installasjon</li>
+          <li id="sidebar-Stage">Step 3: Ferdig!</li>
+        </ul>
+      </div>
+    </nav>
+    <div class="col-2">
+      <header>
+        <h1>Lukas Tips & Tricks</h1>
+      </header>
+      <main class="content">
+        <article>
+          <div class="container">
+            <div class="header">
+              <h1>Sette opp Visual Studio Code</h1>
+              <div class="h-divider">
+                <div class="shadow"></div>
+              </div>
+            </div>
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                voluptas, quod, quia, voluptates quae voluptatibus quibusdam
+                voluptatum quos quas quidem nesciunt. Quisquam, quae. Quisquam
+                quae, quod, quibusdam, voluptates quos quidem nesciunt.
+              </p>
+            </div>
+            <h2 class="line-divider">
+              <span class="span-line-divider">3 min</span>
+            </h2>
+
+            <div class="stages">
+              <section id="download">
+                <div class="step">
+                  <h1>Step 1: Laste ned</h1>
+                  <p>
+                    Gå på det offisielle nettsiden til
+                    <a
+                      href="https://code.visualstudio.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Visual Studio Code</a
+                    >, trykk på last ned knappen du finner.
+                  </p>
+                  <img
+                    src="images/bilde1.png"
+                    alt="Laste ned"
+                    style="max-width: 1000px; max-height: 600px"
+                  />
+                </div>
+              </section>
+              <section id="installation" style="display: none">
+                <div class="step">
+                  <h1>Step 2: Installasjon</h1>
+                  <p>
+                    Gå til nedlastingsmappen og dobbeltklikk på .exe-filen du
+                    nettopp lastet ned for å starte installasjonsprosessen.
+                    Godta lisensavtalen og klikk på Neste.
+                  </p>
+                  <img
+                    src="images/bilde2.jpg"
+                    alt="Installasjon"
+                    style="max-width: 1000px; max-height: 600px"
+                  />
+                </div>
+              </section>
+              <section id="finish" style="display: none">
+                <div class="step">
+                  <h1>Step 3: Ferdig?</h1>
+                  <p>
+                    Når dette kommer opp er du ferdig med installasjonen. Nå er
+                    det bare å åpne programmet og kode i vei.
+                  </p>
+                  <img
+                    src="images/bilde3.png"
+                    alt="Finish"
+                    style="max-width: 1000px; max-height: 600px"
+                  />
+                </div>
+              </section>
+            </div>
+            <button class="button-9" role="button" id="previous">
+              Previous
+            </button>
+            <button class="button-9" role="button" id="next">Next</button>
+          </div>
+        </article>
+      </main>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>
