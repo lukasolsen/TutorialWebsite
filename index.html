@@ -5,114 +5,137 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lag en din første nettside med HTML og CSS</title>
-
     <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="styles/global.css" />
-
     <!-- Fonts and Icons -->
-    <script
-      src="https://kit.fontawesome.com/244b05ebf0.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+    <script src="https://kit.fontawesome.com/244b05ebf0.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body class="dark">
     <nav class="col-1">
       <div class="sidebar">
         <h3 style="text-align: center">Steps:</h3>
-        <ul>
-          <li id="sidebar-Stage">Step 1: Laste ned</li>
-          <li id="sidebar-Stage">Step 2: Installasjon</li>
-          <li id="sidebar-Stage">Step 3: Ferdig!</li>
+        <ul id="sidebars"> <!-- Generated from a script -->
         </ul>
       </div>
     </nav>
     <div class="col-2">
       <header>
-        <h1>Lukas Tips & Tricks</h1>
+        <h1>Lukas Tips & Tricks <a href="https://lukasolsen.netlify.app/" target="_blank" noreferrer><i class="fa-brands fa-github fa-sm"></i></a></h1>
+        
       </header>
       <main class="content">
         <article>
           <div class="container">
             <div class="header">
-              <h1>Sette opp Visual Studio Code</h1>
+              <h1>Lage en nettside med HTML</h1>
               <div class="h-divider">
                 <div class="shadow"></div>
               </div>
             </div>
             <div class="content">
-              <p>
-                Visual Studio Code er en gratis, åpen kildekode-kodeeditor
-                utviklet av Microsoft. Det er en kraftig og allsidig editor som
-                brukes av utviklere over hele verden til å skrive og redigere
-                kode i en rekke programmeringsspråk. Visual Studio Code har en
-                rekke funksjoner som syntax highlighting, kodesnutt-innsetting,
-                Git-integrasjon, debugging og mye mer. Det kan brukes på flere
-                plattformer, inkludert Windows, macOS og Linux.
-              </p>
+              <p> HTML (HyperText Markup Language) er et kodespråk som brukes til å lage nettsider og strukturere innholdet på dem. HTML-koden består av en serie av tagger, som indikerer hva slags type innhold som skal vises på nettsiden, for eksempel tekst, bilder, lenker, tabeller osv. </p>
             </div>
             <h2 class="line-divider">
               <span class="span-line-divider">3 min</span>
             </h2>
-
             <div class="stages">
               <section id="download">
                 <div class="step">
-                  <h1>Step 1: Laste ned</h1>
-                  <p>
-                    Gå på det offisielle nettsiden til
-                    <a
-                      href="https://code.visualstudio.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Visual Studio Code</a
-                    >, trykk på last ned knappen du finner.
+                  <h1 id="title" class="title">Intro: Hva er HTML?</h1>
+                  <p>HTML er en grunnleggende teknologi som brukes i hverdagen til å lage nettsider. Alle nettsider du besøker på nettet er bygget på HTML. Dette inkluderer alt fra enkle blogger og personlige nettsider til store, komplekse nettsider som sosiale medier, nettbutikker, og søkemotorer.</p>
+                  <br>
+                  <p>Her er noen eksempler på hvordan HTML kan brukes i hverdagen:</p>
+                  <ul>
+                    <li>Hvis du vil opprette en enkel nettside for å dele informasjon eller bilder med venner og familie, kan du bruke HTML til å strukturere innholdet og lage en nettside med enkel tekst og bilder.</li>
+                    <li>Hvis du ønsker å starte en blogg, kan du bruke HTML og CSS (Cascading Style Sheets) for å lage et tilpasset design og legge til funksjonalitet som kommentarer og sosiale delingsknapper.</li>
+                    <li>Hvis du ønsker å selge produkter på nettet, kan du bruke HTML og JavaScript for å bygge en nettbutikk med en tilpasset handlekurv og betalingsprosess.</li>
+                    <li>Hvis du ønsker å lage et nettsted for å markedsføre en bedrift eller organisasjon, kan du bruke HTML og CSS for å lage en responsiv nettside som fungerer på alle enheter, fra stasjonære datamaskiner til mobile enheter.</li>
+                  </ul>
+                  <p>Samlet sett er HTML en viktig teknologi som brukes i hverdagen til å lage nettsider og tilpasse dem til spesifikke behov.</p>
+              </section>
+              <section id="download">
+                <div class="step">
+                  <h1>Step 1: Lage en HTML fil.</h1>
+                  <p> Når du skal lage en nettside må du ha en fil som et system kan lese. </p>
+                  <div class="codeblock">
+                    <pre><code style="color: yellow;">index.html</code></pre>
+                  </div>
+              </section>
+              <section id="starterkode" style="display: none">
+                <div class="step">
+                  <h1 id="title" class="title">Step 2: Grunnleggende HTML-struktur</h1>
                   </p>
-                  <img
-                    src="images/bilde1.png"
-                    alt="Laste ned"
-                    style="max-width: 1000px; max-height: 600px"
-                  />
+                  <div class="codeblock">
+                    <pre><code>&lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;Min Nettside&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Lukas Tips &amp; Tricks&lt;/h1&gt;
+      &lt;p&gt;Her kommer det masse tips og triks!&lt;/p&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;</code></pre>
+                  </div>
+                  <p>Dette er en grunnleggende HTML-struktur som oppretter en nettside med en tittel og litt innhold. &lt;!DOCTYPE html&gt; angir at dokumentet er en HTML5-nettside. <html>-taggen markerer starten på HTML-dokumentet, og <head>-taggen inneholder metadata om siden, inkludert tittel. &lt;body&gt;-taggen inneholder all synlig innhold på siden, som overskrifter, avsnitt og bilder.</p>
                 </div>
               </section>
-              <section id="installation" style="display: none">
+              <section id="header" style="display: none">
                 <div class="step">
-                  <h1>Step 2: Installasjon</h1>
-                  <p>
-                    Gå til nedlastingsmappen og dobbeltklikk på .exe-filen du
-                    nettopp lastet ned for å starte installasjonsprosessen.
-                    Godta lisensavtalen og klikk på Neste.
-                  </p>
-                  <img
-                    src="images/bilde2.jpg"
-                    alt="Installasjon"
-                    style="max-width: 1000px; max-height: 600px"
-                  />
+                  <h1 id="title" class="title">Step 3: Legge til overskrifter</h1>
+                  <div class="codeblock">
+                    <pre><code>&lt;h1&gt;Dette er en header&lt;/h1&gt;</code></pre>
+                  </div>
+                  <p>Dette er en HTML-tag som brukes til å opprette overskrifter på siden. Hovedoverskriften skal vanligvis være &lt;h1&gt;, og deretter bruke &lt;h2&gt;, &lt;h3&gt; osv. for mindre overskrifter.</p>
                 </div>
               </section>
-              <section id="finish" style="display: none">
+              <section id="paragraph" style="display: none">
                 <div class="step">
-                  <h1>Step 3: Ferdig?</h1>
-                  <p>
-                    Når dette kommer opp er du ferdig med installasjonen. Nå er
-                    det bare å åpne programmet og kode i vei.
-                  </p>
-                  <img
-                    src="images/bilde3.png"
-                    alt="Finish"
-                    style="max-width: 1000px; max-height: 600px"
-                  />
+                  <h1 id="title" class="title">Step 4: Legge til avsnitt</h1>
+                  <div class="codeblock">
+                    <pre><code>&lt;p&gt;Dette er et avsnitt med tekst.&lt;/p&gt;</code></pre>
+                  </div>
+                  <p>Dette er en HTML-tag som brukes til å opprette avsnitt på siden. All tekst på siden skal være inne i &lt;p&gt;-tagger.</p>
+                </div>
+              </section>
+              <section id="image" style="display: none">
+                <div class="step">
+                  <h1 id="title" class="title">Step 5: Legge til et bilde</h1>
+                  <div class="codeblock">
+                    <pre><code>&lt;img src="myimage.png" alt="Hvis bildet ikke laster, vis dette."&gt;</code></pre>
+                  </div>
+                  <p>Dette er en HTML-tag som brukes til å opprette overskrifter på siden. Hovedoverskriften skal vanligvis være &lt;h1&gt;, og deretter bruke &lt;h2&gt;, &lt;h3&gt; osv. for mindre overskrifter.</p>
+                </div>
+              </section>
+              <section id="sluttprodukt" style="display: none">
+                <div class="step">
+                  <h1 id="title" class="title">Step 6: Slutt produktet</h1>
+                  <div class="codeblock">
+<pre><code>&lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;Min Første Nettside&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Velkommen til Min Første Nettside&lt;/h1&gt;
+      &lt;img src="https://images.interactives.dk/shutterstock_197873804-93pMLXs4O4SyL9laf1C7bg.jpg" alt="Dette er et landskaps bilde." hieght="100" width="100"&gt;
+      &lt;p&gt;Dette er en veldig enkel nettside som viser et bilde og noen tekstlinjer.&lt;/p&gt;
+      &lt;p&gt;Det er mye mer du kan gjøre med HTML, men dette er en god start!&lt;p&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;</code></pre>
+                  </div>
+                  <p>Dette viser alt det du har lært til nå.</p>
+                  <img src="images/sluttprodukt.png">
                 </div>
               </section>
             </div>
-            <button class="button-9" role="button" id="previous">
-              Previous
-            </button>
-            <button class="button-9" role="button" id="next">Next</button>
+            <div class="button-section">
+              <button class="button-9" role="button" id="previous"> Previous </button>
+              <button class="button-9" role="button" id="next">Next</button>
+            </div>
           </div>
         </article>
       </main>

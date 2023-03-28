@@ -1,10 +1,13 @@
 :root{
-    --dark-background: #443C68;
-    --dark-sidebar-bg: #393053;
+    /*--dark-background: #443C68;
+    --dark-sidebar-bg: #393053;*/
     --dark-text: #fff;
+    --dark-background: #131417;
+    --dark-sidebar-bg: #1E1F26;
 
     --light-background: #fff;
     --light-text: #000;
+    --code-font: 'Telefon', Sans-Serif;
 }
 
 * {
@@ -38,6 +41,7 @@
     top: 5vh;
     margin-top: 10px;
     height: 90vh;
+    box-shadow: rgba(255, 255, 255, 0.09) 0px 3px 8px;
   }
   .col-2 {
     display: flex;
@@ -69,4 +73,30 @@
     color: #405cf5;
     text-decoration: none;
     font-weight: 600;
+}
+.button-section{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.step img{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.codeblock{
+  background-color: #43454F;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  font-family: var(--code-font);
+  font-size: 14px;
+}
+
+.codeblock code{
+    color: white;
+    text-align: left;
 }
